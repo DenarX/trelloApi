@@ -1,5 +1,8 @@
 <?php
 $trello = new Trello;
+if (isset($_GET['models'])) {
+    die('<pre>' . print_r($trello->getAllTokens(), true) . '</pre>');
+}
 $trello->renderActoins();
 
 /*
